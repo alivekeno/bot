@@ -3,10 +3,12 @@ import google.generativeai as genai
 from aiogram import Bot, Dispatcher
 from aiogram.types import Message
 from aiogram.filters import Command
+from dotenv import load_dotenv
+import os
 
-
-TOKEN = "7620703873:AAH88qgsCJMg-TMsT6kZDiBwCNYEiTC_Lx0"
-GEMINI_API_KEY = "AIzaSyCuAlmNOfiMQfVvRYViMaqmyDi0REf89C0"
+load.dotenv()
+TOKEN = os.getenv("BOT_TOKEN")
+GEMINI_API_KEY = os.getenv("AI_TOKEN")
 MODEL_NAME = "gemini-2.0-pro-exp-02-05"
 
 HELP_COMMAND = """
